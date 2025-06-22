@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
+  background: #111;
+  color: #fff;
   min-height: 100vh;
+  font-family: 'Fira Code', monospace;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.gif-wrap {
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gif {
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff9970;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #00ff99, #00ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: minmax(200px, auto);
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+.card {
+  background: #1e1e1e;
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;    /* ← adiciona isso aqui */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 10px #00ff9955;
+}
+.icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  /* margin-bottom: 1rem;   ← pode tirar, se quiser igualizar */
+}
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.search {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.search h2 {
+  margin-bottom: 1rem;
+}
+
+.search input {
+  padding: 0.8rem;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  background: #222;
+  color: #0f0;
+  box-shadow: 0 0 5px #00ff99;
+  caret-color: #00ff99;
+  font-family: 'Fira Code', monospace;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.search input:focus {
+  outline: none;
+  background: #111;
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.search button {
+  padding: 0.8rem 1.2rem;
+  margin-left: 1rem;
+  border: none;
+  border-radius: 5px;
+  background: #00ff99;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ff99;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search button:hover {
+  background: #00cc7a;
+  box-shadow: 0 0 15px #00ff99;
+}
+
+.legend {
+  margin-top: 1rem;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.legend .nat { color: #00ff99; }
+.legend .gold { color: #FFD700; }
+.legend .silv { color: #C0C0C0; }
+.legend .bron { color: #cd7f32; }
+
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 1rem 0;
+  border-top: 1px solid #222;
+}
+
+.footer a {
+  color: #00ff99;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
