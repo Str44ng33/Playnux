@@ -74,7 +74,6 @@
   width: 64px;
   height: 64px;
   object-fit: contain;
-  /* margin-bottom: 1rem;   ← pode tirar, se quiser igualizar */
 }
 .card h2 {
   font-size: 1.2rem;
