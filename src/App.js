@@ -50,7 +50,7 @@ const ITEMS = [
   {
     img: "https://dl.flathub.org/media/io/mrarm/mcpelauncher/21378b563da742b4b2d73451a6e240d5/icons/128x128@2/io.mrarm.mcpelauncher.png",
     title: "Minecraft Bedrock",
-    link: "https://minecraft-linux.github.io/",
+    link: "https://flathub.org/apps/io.mrarm.mcpelauncher",
     text: "Nix Launcher",
   },
   {
